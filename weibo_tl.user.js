@@ -5,6 +5,7 @@
 // @version      2017.1.3.4
 // @author       kindJeff
 // @match        http://weibo.com/*
+// @match        http://www.weibo.com/*
 // @grant        none
 // ==/UserScript==
 
