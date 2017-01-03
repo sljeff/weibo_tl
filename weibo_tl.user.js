@@ -2,7 +2,7 @@
 // @name         PC微博首页时间线正确排布
 // @description  让微博时间线正确排布
 // @namespace    https://www.kindjeff.com/
-// @version      2017.1.3.3
+// @version      2017.1.3.4
 // @author       kindJeff
 // @match        http://weibo.com/*
 // @grant        none
@@ -16,8 +16,7 @@
         var is_sorted = window.location.search.indexOf('is_search')!=-1;
 
         var right_search = 'is_ori=1&is_forward=1&is_text=1&is_pic=1&is_video=1&is_music=1&is_article=1&is_search=1';
-        var username = window.location.pathname.split('/')[1];
-        var sorted_url = '/' + username + '/home?' + right_search;
+        var sorted_url = '/home?' + right_search;
 
 
         if(is_home && !is_sorted){
