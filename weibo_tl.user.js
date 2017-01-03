@@ -21,7 +21,7 @@
 
 
         if(is_home && !is_sorted){
-            window.location = 'http://weibo.com' + sorted_url;
+            window.location = sorted_url;
         }else{
             document.addEventListener('click', function(e){
                 var is_target_a = e.target.href!==undefined;
@@ -39,7 +39,7 @@
                             var new_href = the_target.href.replace(/pids=Pl_Content_HomeFeed/, '');
                             window.location = new_href;
                         }else
-                            window.location = 'http://weibo.com' + sorted_url;
+                            window.location = sorted_url;
                     }
                 }
             },true);
