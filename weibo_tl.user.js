@@ -30,7 +30,7 @@
                 if(!is_target_a)
                     the_target = e.target.parentNode;
 
-                if(the_target.href！==undefined && the_target.href.indexOf('/home') != -1){
+                if(the_target.href!==undefined && the_target.href.indexOf('/home') != -1){
                     e.preventDefault();
                     window.location = 'http://weibo.com' + sorted_url;
                 }
