@@ -2,10 +2,11 @@
 // @name         PC微博首页时间线正确排布
 // @description  让微博时间线正确排布
 // @namespace    https://www.kindjeff.com/
-// @version      2017.1.4
+// @version      2017.2.14
 // @author       kindJeff
 // @match        http://weibo.com/*
 // @match        http://www.weibo.com/*
+// @start-at     document-start
 // @grant        none
 // ==/UserScript==
 
@@ -31,6 +32,9 @@
                     the_target = e.target.parentNode;
 
                 if(the_target.href!==undefined){
+                    if(the_target.href.slice(-12)==='is_search=1#'){
+                        return;
+                    }
                     var slash_path = 2;
                     if(the_target.href.indexOf('://') != -1){
                         slash_path = 4;
