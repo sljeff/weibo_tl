@@ -4,6 +4,8 @@
 // @namespace    https://www.kindjeff.com/
 // @version      2017.2.14
 // @author       kindJeff
+// @match        https://weibo.com/*
+// @match        https://www.weibo.com/*
 // @match        http://weibo.com/*
 // @match        http://www.weibo.com/*
 // @start-at     document-start
@@ -29,7 +31,7 @@
 
                 var the_target = e.target;
                 if(!is_target_a)
-                    the_target = e.target.parentNode;
+                    {the_target = e.target.parentNode;}
 
                 if(the_target.href!==undefined){
                     if(the_target.href.slice(-12)==='is_search=1#'){
@@ -46,8 +48,9 @@
                             e.preventDefault();
                             var new_href = the_target.href.replace(/pids=Pl_Content_HomeFeed/, '');
                             window.location = new_href;
-                        }else
+                        }else{
                             window.location = sorted_url;
+                        }
                     }
                 }
             },true);
